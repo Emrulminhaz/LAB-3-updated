@@ -31,7 +31,7 @@ if(!preg_match("/^[a-zA-Z -]*$/", $name))
 }
 }
 $BLOOD =$_POST["BLOOD"];
-  {if ($_POST["BLOOD"] == "NULL") {
+  {if ($_POST["BLOOD"] == "Null") {
     $error_msg["BLOOD"] = "BLOOD is required";
 }
 }
@@ -112,7 +112,7 @@ if (isset($error_msg["gender"]))
     <td>
   <input type="radio" name="degree" value="SSC" id="degree"
   <?php if (isset($degree) && $degree ='SSC') echo "checked='checked'"; ?> />
-  <Label for="degree">DEGREE</Label>
+  <Label for="degree">SSC</Label>
   <input type="radio" name="degree" value="HSC" id="degree"
   <?php if (isset($degree) && $degree ='HSC') echo "checked='checked'"; ?> />
   <Label for="gender">HSC</Label>
@@ -133,7 +133,7 @@ if (isset($error_msg["degree"]))
   <td class="Label"> <LABEL for="BLOOD">Blood Group</LABEL></td>
         <td>
            <select name="BLOOD" id="BLOOD">
-          <option name="BLOOD" value="NULL" > Select a Option </option>   
+          <option name="BLOOD" value="Null" placeholder="Select a Option"> </option>   
         <option name="BLOOD" value="A+">A+</option>
         <option name="BLOOD" value="A-">A-</option>
         <option name="BLOOD" value="B+">B+</option>
@@ -187,14 +187,14 @@ $email;
 $birthdate;
 $gender = $_POST["gender"];
 $degree = $_POST["degree"];
-$BLOOD = $_["BLOOD"];
+$BLOOD;
 
 fwrite($file, $name); 
 fwrite($file, $email); 
 fwrite($file, $birthdate);
 fwrite($file, $gender);
 fwrite($file, $degree);
-fwrite($file, $Blood);
+fwrite($file, $BLOOD);
 
 
 
