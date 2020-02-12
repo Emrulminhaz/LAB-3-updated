@@ -62,7 +62,7 @@ if (isset($error_msg["gender"]))
     <td>
   <input type="radio" name="degree" value="SSC" id="degree"
   <?php if (isset($degree) && $degree ='SSC') echo "checked='checked'"; ?> 
-  <Label for="degree">DEGREE</Label>
+  <Label for="degree">SSC</Label>
   <input type="radio" name="degree" value="HSC" id="degree"
   <?php if (isset($degree) && $degree ='HSC') echo "checked='checked'"; ?> 
   <Label for="gender">HSC</Label>
@@ -82,8 +82,8 @@ if (isset($error_msg["degree"]))
 <tr class="row">
   <td class="Label"> <LABEL for="BLOOD">Blood Group</LABEL></td>
         <td>
-           <select name="BLOOD" id="BLOOD">
-          <option name="BLOOD" value="NULL" > Select a Option </option>   
+           <select name="BLOOD" id="BLOOD">t
+       <option name="BLOOD" value="Null" placeholder="Select a Option"> </option>  
         <option name="BLOOD" value="A+">A+</option>
         <option name="BLOOD" value="A-">A-</option>
         <option name="BLOOD" value="B+">B+</option>
